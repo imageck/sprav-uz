@@ -1,13 +1,96 @@
+/* || global vars */
+:root {
+  --main-color: #fff;
+  --accent-color: #0aa9b4;
+  --disabled-color: #e9e9ea;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  background-color: var(--main-color);
+  margin: 0 auto;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #4c4c50;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* || resets */
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+input, select,
+input[type="search"] {
+  appearance: none;
+}
+
+button,
+input,
+select,
+textarea {
+  border: none;
+  background: none;
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* || custom select arrows */
+#locale-select { 
+  padding-left: 12px;
+  background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNyIgaGVpZ2h0PSI0IiB2aWV3Qm94PSIwIDAgNyA0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMy41IDIuNzE1MUw2LjI5MDc5IDYuMjAwMDllLTA4TDcgMC41OTQ5MjZMMy41IDRMLTQuMjQ4MjdlLTA3IDAuNTk0OTI2TDAuNzA5MjA4IDUuNDk5NTllLTA3TDMuNSAyLjcxNTFaIiBmaWxsPSIjMEFBOUI0Ii8+PC9zdmc+Cg==") left 60% no-repeat; 
+}
+
+select#region, #map select {
+  padding-right: 20px;
+  background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNyIgaGVpZ2h0PSI0IiB2aWV3Qm94PSIwIDAgNyA0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMy41IDIuNzE1MUw2LjI5MDc5IDYuMjAwMDllLTA4TDcgMC41OTQ5MjZMMy41IDRMLTQuMjQ4MjdlLTA3IDAuNTk0OTI2TDAuNzA5MjA4IDUuNDk5NTllLTA3TDMuNSAyLjcxNTFaIiBmaWxsPSIjMEFBOUI0Ii8+PC9zdmc+Cg==") 88% center no-repeat; 
+}
+
+/* || reset links */
+a {
+  outline: none;
+  text-decoration: none;
+  color: #8e8e91;
+}
+
+a:link {
+}
+
+a:visited {
+}
+
+a:focus {
+}
+
+a:hover {
+  text-decoration: underline var(--accent-color);
+}
+
+a:active {
 }
